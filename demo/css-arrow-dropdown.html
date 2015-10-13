@@ -1,0 +1,144 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://static.tumblr.com/3lhmsqm/xyUnprynp/jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+		.wrapper{			
+		    position: relative;
+		    height: auto;
+		    width: 400px;
+		    text-align: center;
+		    margin:0 auto;
+		    margin-top:200px;		    
+		}
+		.block{
+			background-color: #EEE;
+		    position: relative;
+		    height: 100px;
+		    width: 200px;
+		    text-align: center;
+		    margin:0 auto;
+		    margin-top:20px;
+		    border:#DDD solid 1px;		
+		}		
+		.menu-section,.arrow-section {
+		    margin-left: -34px;
+		    left: 50%;		   
+		    position: absolute;
+		    right: 15px;
+		    width: 69px;
+		    background: none;
+		    padding: 0;
+		    border: none;
+		    cursor: pointer;
+		    display: block;
+		    height: 50px;
+		    outline: 0;
+		    top: 50%;
+		    margin-top: -25px;
+		}		
+		.arrow-section span {
+		    width: 49%;
+		    height: 2px;
+		    background-color: #333;
+		    display: block;
+		    position: absolute;
+		    top: 23px;
+		    -webkit-transition: all .2s ease-in-out;
+		    transition: all .2s ease-in-out;
+		}		
+		.arrow-section span:nth-child(1) {
+		    -webkit-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		    left:6px;
+		}		
+		.arrow-section.show span:nth-child(1) {
+		    -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}	
+		.arrow-section span:nth-child(2) {
+		    -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		    left: 30px;
+		}				
+		.arrow-section.show span:nth-child(2) {
+		    -webkit-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		    left: 30px;
+		}	
+
+
+		.menu-section{
+			width:50px;
+			height:36px;
+			margin-top:-18px;
+			margin-left:-25px;			
+		}
+		.menu-section span {
+		    width: 100%;
+		    height: 3px;
+		    background-color: #333;
+		    display: block;
+		    position: absolute;		    
+		    -webkit-transition: all .2s ease-in-out;
+		    transition: all .2s ease-in-out;
+		}
+		.menu-section span:nth-child(1) {
+			top:0;
+		}
+		.menu-section span:nth-child(2) {
+			top:17px;
+			opacity:1;
+		}
+		.menu-section span:nth-child(3) {
+			top:33px;
+		}		
+
+		.menu-section.show span:nth-child(1) {
+			top:17px;
+			transform:rotate(45deg);
+			-webkig-transform:rotate(45deg);
+		}
+		.menu-section.show span:nth-child(2) {			
+			opacity:0;
+		}
+		.menu-section.show span:nth-child(3) {
+			top:17px;
+			transform:rotate(-45deg);
+			-webkig-transform:rotate(-45deg);			
+		}		
+
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('.arrow-section, .menu-section').on('click', function(){
+				$(this).toggleClass('show');
+			})
+		})
+	</script>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="block">
+			<button class="arrow-section">
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div class="block">
+			<button class="menu-section">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>		
+	</div>
+
+</body>
+</html>
